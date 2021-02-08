@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CommentNetworkSarvice {
+class CommentNetworkService {
     
     private init () {}
     

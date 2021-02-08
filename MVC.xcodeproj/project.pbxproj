@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A831604925D18EC100B2DE3E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831604825D18EC100B2DE3E /* NetworkService.swift */; };
 		A8610D3D25D149EE0072FECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8610D3C25D149EE0072FECA /* AppDelegate.swift */; };
 		A8610D3F25D149EE0072FECA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8610D3E25D149EE0072FECA /* SceneDelegate.swift */; };
 		A8610D4125D149EE0072FECA /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8610D4025D149EE0072FECA /* CommentsViewController.swift */; };
@@ -15,10 +16,14 @@
 		A8610D4925D149F10072FECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8610D4825D149F10072FECA /* Assets.xcassets */; };
 		A8610D4C25D149F10072FECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8610D4A25D149F10072FECA /* LaunchScreen.storyboard */; };
 		A8610D6225D183560072FECA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8610D6125D183560072FECA /* Comment.swift */; };
+		A863FE4825D195FA00C74AE3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863FE4725D195FA00C74AE3 /* NetworkError.swift */; };
+		A8EC5D3B25D1916500371718 /* CommentsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EC5D3A25D1916500371718 /* CommentsNetworkService.swift */; };
+		A8EC5D4025D1935700371718 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EC5D3F25D1935700371718 /* GetCommentResponse.swift */; };
 		A8F7B77425D188EE0044400E /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7B77325D188EE0044400E /* CommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A831604825D18EC100B2DE3E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A8610D3925D149EE0072FECA /* MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8610D3C25D149EE0072FECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8610D3E25D149EE0072FECA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +34,9 @@
 		A8610D4B25D149F10072FECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8610D4D25D149F10072FECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8610D6125D183560072FECA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A863FE4725D195FA00C74AE3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A8EC5D3A25D1916500371718 /* CommentsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsNetworkService.swift; sourceTree = "<group>"; };
+		A8EC5D3F25D1935700371718 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 		A8F7B77325D188EE0044400E /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A831604C25D1911F00B2DE3E /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				A8EC5D3A25D1916500371718 /* CommentsNetworkService.swift */,
+			);
+			path = "Network Service";
+			sourceTree = "<group>";
+		};
 		A8610D3025D149EE0072FECA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +80,7 @@
 			children = (
 				A8610D5525D14C560072FECA /* Application */,
 				A8610D5625D14C610072FECA /* Comments */,
+				A831604C25D1911F00B2DE3E /* Network Service */,
 				A8610D5725D14C690072FECA /* Supporting Files */,
 				A8610D3E25D149EE0072FECA /* SceneDelegate.swift */,
 			);
@@ -76,6 +93,7 @@
 				A8610D5B25D14CDB0072FECA /* Model */,
 				A8610D5A25D14CD30072FECA /* View */,
 				A8610D5925D14CC70072FECA /* Controller */,
+				A8F7B77625D18E730044400E /* Network Service */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -119,6 +137,7 @@
 		A8610D5B25D14CDB0072FECA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A863FE4725D195FA00C74AE3 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,9 +162,26 @@
 		A8610D5E25D14CF70072FECA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A863FE4625D1955400C74AE3 /* Responses */,
 				A8610D6125D183560072FECA /* Comment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A863FE4625D1955400C74AE3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				A8EC5D3F25D1935700371718 /* GetCommentResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		A8F7B77625D18E730044400E /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				A831604825D18EC100B2DE3E /* NetworkService.swift */,
+			);
+			path = "Network Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +256,13 @@
 			files = (
 				A8610D6225D183560072FECA /* Comment.swift in Sources */,
 				A8F7B77425D188EE0044400E /* CommentTableViewCell.swift in Sources */,
+				A831604925D18EC100B2DE3E /* NetworkService.swift in Sources */,
 				A8610D4125D149EE0072FECA /* CommentsViewController.swift in Sources */,
 				A8610D3D25D149EE0072FECA /* AppDelegate.swift in Sources */,
+				A863FE4825D195FA00C74AE3 /* NetworkError.swift in Sources */,
+				A8EC5D3B25D1916500371718 /* CommentsNetworkService.swift in Sources */,
 				A8610D4725D149EE0072FECA /* MVC.xcdatamodeld in Sources */,
+				A8EC5D4025D1935700371718 /* GetCommentResponse.swift in Sources */,
 				A8610D3F25D149EE0072FECA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
